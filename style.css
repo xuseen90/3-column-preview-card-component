@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+  --BgOrange: hsl(31, 77%, 52%);
+  --BgDarkcyan: hsl(184, 100%, 22%);
+  --BgVeryDarkCyan: hsl(179, 100%, 13%);
+  --White: hsla(0, 0%, 100%, 0.75);
+  --VeryLightGray: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lexend Deca';
+}
+h2 {
+  font-family: 'Big Shoulders Display';
+  text-transform: uppercase;
+}
+p {
+  font-size: 15px;
+  color: var(--White);
+}
+
+.component {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+}
+.Sedans {
+  width: 100%;
+  background-color: var(--BgOrange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 30px 40px;
+  color: var(--VeryLightGray);
+  /* padding: 5px 40px; */
+}
+.Sedans img {
+  margin-bottom: 30px;
+}
+.Sedans h2 {
+  margin-bottom: 30px;
+}
+.SUVs {
+  width: 100%;
+  background-color: var(--BgDarkcyan);
+  padding: 30px 40px;
+  color: var(--VeryLightGray);
+}
+.SUVs img {
+  margin-bottom: 30px;
+}
+.SUVs h2 {
+  margin-bottom: 30px;
+}
+.Luxury {
+  width: 100%;
+  background-color: var(--BgVeryDarkCyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 30px 40px;
+  color: var(--VeryLightGray);
+}
+.Luxury img {
+  margin-bottom: 30px;
+}
+.Luxury h2 {
+  margin-bottom: 30px;
+}
+button {
+  margin-top: 30px;
+  background-color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn-Sedans {
+  color: var(--BgOrange);
+}
+.btn-suvs {
+  color: var(--BgDarkcyan);
+}
+.btn-luxury {
+  color: var(--BgVeryDarkCyan);
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--VeryLightGray);
+  color: var(--VeryLightGray);
+}
+
+@media only screen and (max-width: 767px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .Sedans {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .Luxury {
+    border-top-right-radius: 0px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
